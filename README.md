@@ -3,7 +3,12 @@
 Briefly explain the work that you did on this project: What code were you given? What code did you create yourself?
 
     All of the helper functions, variables, and supplementary classes for this project were provided. The code that was 
-    ultimately up to me to create was the actual deep Q-learning algorithm for the neural network. 
+    ultimately up to me to create was the actual deep Q-learning algorithm for the neural network. Doing so entailed 
+    implementing a training loop which learned to navigate a maze through interaction with the environment. In each 
+    epoch, the agent begins by selecting a random, valid position and selects an action utilizing an epsilson-greedy
+    approach which balances exploration and exploitation. Experiences from each step are then stored in a replay buffer
+    and sampled to train the network used to approximate the Q-function. A target network is used to stabilize the
+    training, and metrics are gathered to evaluate the overall performance of the algorithm.
 
 Connect your learning from throughout this course to the larger field of computer science:
   What do computer scientists do and why does it matter?
