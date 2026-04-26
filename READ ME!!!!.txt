@@ -1,0 +1,27 @@
+Run on VS Code using a virtual environment (.venv).
+MUST be run on 3.11.xx (I think I used .9) of Python.
+Ultimately had to replicated the Codio environment originally used,
+through a lot of trial and error.
+
+anyways -
+In the project terminal, 
+ 
+cd ~
+cd of project folder
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate
+
+Then 
+
+python -m pip install tensorflow ipywidgets
+python -m pip install ipykernel ipywidgets
+
+And to install the venv as a selectable Jupyter kernel
+
+python -m ipykernel install --user --name treasurehunt-venv --display-name "TreasureHunt (.venv)"
+
+It was very finnicky and difficult to figure out, hopefully
+it doesn't give you the same trouble if you have to run it 
+because I was super unfamiliar with anything of the sort.
+
+-Brian Carman
